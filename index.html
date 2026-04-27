@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Иконка сайта -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <!-- Настройки адаптивности -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Заголовок страницы во вкладке браузера -->
+  <title>Олюшин | Портфолио</title>
+
+  <!-- Подключение CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <!-- Логотип -->
+        <a class="brand" href="index.html">Портфолио</a>
+
+        <!-- Дополнительные элементы шапки -->
+        <div class="nav-actions">
+          <!-- Переключатель темы -->
+          <div class="theme-switch" data-theme-switch aria-label="Переключатель темы">
+            <button type="button" data-theme-btn="light" aria-label="Светлая тема" aria-pressed="false">☀</button>
+            <button type="button" data-theme-btn="system" aria-label="Как в системе" aria-pressed="false">💻</button>
+            <button type="button" data-theme-btn="dark" aria-label="Тёмная тема" aria-pressed="false">🌙</button>
+            <span class="theme-switch__indicator" aria-hidden="true"></span>
+          </div>
+
+          <!-- Бургер-меню -->
+          <button class="burger" data-burger aria-label="Меню" aria-expanded="false">
+            ☰ <span style="font-size:13px;color:var(--muted)">Меню</span>
+          </button>
+        </div>
+
+        <!-- Основная навигация -->
+        <nav class="nav" data-nav>
+          <a class="active" href="index.html">Главная страница</a>
+          <a href="pages/education.html">Образование</a>
+          <a href="pages/work-experience.html">Опыт работы</a>
+
+          <!-- Выпадающее меню достижений -->
+          <div class="dropdown" data-dropdown>
+            <button type="button" data-dropdown-btn aria-expanded="false">Достижения ▾</button>
+            <div class="dropdown-panel">
+              <a href="pages/achievements/teacher.html">Преподавателя</a>
+              <a href="pages/achievements/students.html">Студентов</a>
+            </div>
+          </div>
+
+          <a href="pages/projects.html">Проекты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основное содержимое страницы -->
+  <main class="container">
+    <!-- Заголовок страницы -->
+    <h1 class="page-title">Олюшин Владислав Викторович</h1>
+    <p class="subtitle">Портфолио преподавателя</p>
+
+    <!-- Блок с фотографией и основной информацией -->
+    <section class="section hero">
+      <div class="portrait">
+        <!-- Кликабельное фото -->
+        <div class="portrait-card" id="portraitCard" role="button" tabindex="0"
+             aria-label="Открыть фото в полном размере">
+          <img
+            src="assets/img/portrait.jpg"
+            alt="Фото преподавателя"
+            id="portraitImg"
+          />
+        </div>
+      </div>
+
+      <div>
+        <h2>Краткая информация</h2>
+        <ul class="factlist">
+          <li><b>Город:</b> Славгород</li>
+          <li><b>Педагогический стаж:</b> 2 года</li>
+          <li><b>Квалификационная категория:</b> без категории</li>
+          <li><b>Место работы:</b>
+            <a href="https://vk.com/yarovoe_tehnikum">КГБПОУ "Яровской политехнический техникум"</a>
+          </li>
+          <li><b>Адрес учреждения:</b> 658839, Алтайский край, г. Яровое, ул. Гагарина, 10</li>
+          <li><b>Телефон учреждения:</b> +7 (385) 682 07-75</li>
+          <li><b>Должность:</b> Преподаватель</li>
+          <li><b>Преподаваемые дисциплины:</b> специальные дисциплины направления ИСиП</li>
+          <li><b>Email:</b> <a href="mailto:vladislav-olyushin@yandex.ru">vladislav-olyushin@yandex.ru</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Описание -->
+    <section class="card">
+      <h2>Описание</h2>
+      <p>
+        Преподаватель специальных дисциплин по направлению «Информационные системы и программирование».
+        В работе уделяю особое внимание формированию практических навыков программирования,
+        работе с информационными системами и подготовке студентов к реальным профессиональным задачам в сфере IT.
+      </p>
+    </section>
+
+    <!-- Карта места работы -->
+    <section class="card">
+      <h2>Место работы</h2>
+      <div class="map-wrapper">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=78.564672%2C52.915145&z=18&mode=poi&poi%5Bpoint%5D=78.564001%2C52.914537"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно для фото и документов -->
+  <div class="img-modal" id="imgModal" aria-hidden="true" role="dialog">
+    <div class="img-modal__dialog">
+      <img class="img-modal__img" id="imgModalImg" alt="Документ" />
+      <iframe class="img-modal__frame" id="imgModalFrame" title="Документ" hidden></iframe>
+    </div>
+  </div>
+
+  <!-- Подключение JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

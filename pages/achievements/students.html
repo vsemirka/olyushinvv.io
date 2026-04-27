@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <!-- Мета-информация и настройки страницы -->
+  <meta charset="utf-8" />
+  <!-- Иконка сайта (favicon) -->
+  <link rel="icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+  <!-- Адаптивная область просмотра для мобильных устройств -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Заголовок страницы во вкладке браузера -->
+  <title>Олюшин | Достижения студентов</title>
+  <!-- Подключение основного файла стилей -->
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=20260427" />
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <!-- Логотип/название сайта со ссылкой на главную страницу -->
+        <a class="brand" href="../../index.html">Портфолио</a>
+
+        <!-- Блок элементов управления навигацией -->
+        <div class="nav-actions">
+          <!-- Переключатель темы оформления -->
+          <div class="theme-switch" data-theme-switch aria-label="Переключатель темы">
+            <button type="button" data-theme-btn="light" aria-label="Светлая тема" aria-pressed="false">☀</button>
+            <button type="button" data-theme-btn="system" aria-label="Как в системе" aria-pressed="false">💻</button>
+            <button type="button" data-theme-btn="dark" aria-label="Тёмная тема" aria-pressed="false">🌙</button>
+            <span class="theme-switch__indicator" aria-hidden="true"></span>
+          </div>
+
+          <!-- Кнопка бургер-меню для мобильной навигации -->
+          <button class="burger" data-burger aria-label="Меню" aria-expanded="false">
+            ☰ <span style="font-size:13px;color:var(--muted)">Меню</span>
+          </button>
+        </div>
+
+        <!-- Основное навигационное меню -->
+        <nav class="nav" data-nav>
+          <a href="../../index.html">Главная страница</a>
+          <a href="../education.html">Образование</a>
+          <a href="../work-experience.html">Опыт работы</a>
+
+          <!-- Выпадающее меню с разделами достижений -->
+          <div class="dropdown" data-dropdown>
+            <button type="button" data-dropdown-btn aria-expanded="false">Достижения ▾</button>
+            <div class="dropdown-panel">
+              <a href="teacher.html">Преподавателя</a>
+              <a class="active" href="students.html">Студентов</a>
+            </div>
+          </div>
+
+          <a href="../projects.html">Проекты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основное содержимое -->
+  <main class="container">
+    <!-- Заголовок и подзаголовок страницы -->
+    <h1 class="page-title">Достижения студентов</h1>
+    <p class="subtitle">
+      Сертификаты, благодарности, дипломы и подтверждения результатов
+    </p>
+
+    <!-- Секция с фильтрами и галереей документов -->
+    <section class="section">
+      <!-- Панель управления сортировкой и фильтрацией -->
+      <div class="gallery-controls" data-gallery-controls data-gallery-target="students">
+        <label class="input">
+          <span>Сортировка</span>
+          <select data-gallery-sort>
+            <option value="date-desc" selected>По дате (новые)</option>
+            <option value="date-asc">По дате (старые)</option>
+            <option value="name-asc">По имени (А-Я)</option>
+            <option value="name-desc">По имени (Я-А)</option>
+          </select>
+        </label>
+        <label class="input">
+          <span>С даты</span>
+          <input type="text" inputmode="numeric" placeholder="дд.мм.гггг" data-gallery-from />
+        </label>
+        <label class="input">
+          <span>По дату</span>
+          <input type="text" inputmode="numeric" placeholder="дд.мм.гггг" data-gallery-to />
+        </label>
+        <button type="button" class="btn btn--ghost" data-gallery-clear>Сброс</button>
+      </div>
+
+      <!-- Галерея заполняется автоматически из content/achievements/students. -->
+      <div class="gallery gallery--4"
+           data-auto-gallery
+           data-gallery-id="students"
+           data-gallery-path="content/achievements/students"
+           data-gallery-base="../../content/achievements/students"
+           data-gallery-title="Документ студента"
+           data-gallery-sort="date-desc"
+           data-gallery-branch="main"
+           data-repo-owner="vsemirka"
+           data-repo-name="olyushinvv.io">
+        <p class="subtitle" style="margin:0">Загрузка изображений...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно -->
+  <div class="img-modal" id="imgModal" aria-hidden="true" role="dialog">
+    <div class="img-modal__dialog">
+      <!-- Область для изображений -->
+      <img class="img-modal__img" id="imgModalImg" alt="Документ" />
+      <!-- Область для встроенного просмотра PDF -->
+      <iframe class="img-modal__frame" id="imgModalFrame" title="Документ" hidden></iframe>
+    </div>
+  </div>
+
+  <!-- Подключение основного клиентского скрипта -->
+  <script src="../../assets/js/main.js?v=20260427"></script>
+</body>
+</html>

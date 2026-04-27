@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <!-- Мета-информация и настройки страницы -->
+  <meta charset="utf-8" />
+  <!-- Иконка сайта (favicon) -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <!-- Адаптивная область просмотра для мобильных устройств -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Заголовок страницы во вкладке браузера -->
+  <title>Олюшин | Образование</title>
+  <!-- Подключение основного файла стилей -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <!-- Логотип/название сайта со ссылкой на главную страницу -->
+        <a class="brand" href="../index.html">Портфолио</a>
+
+        <!-- Блок элементов управления навигацией -->
+        <div class="nav-actions">
+          <!-- Переключатель темы оформления -->
+          <div class="theme-switch" data-theme-switch aria-label="Переключатель темы">
+            <button type="button" data-theme-btn="light" aria-label="Светлая тема" aria-pressed="false">☀</button>
+            <button type="button" data-theme-btn="system" aria-label="Как в системе" aria-pressed="false">💻</button>
+            <button type="button" data-theme-btn="dark" aria-label="Тёмная тема" aria-pressed="false">🌙</button>
+            <span class="theme-switch__indicator" aria-hidden="true"></span>
+          </div>
+
+          <!-- Кнопка бургер-меню для мобильной навигации -->
+          <button class="burger" data-burger aria-label="Меню" aria-expanded="false">
+            ☰ <span style="font-size:13px;color:var(--muted)">Меню</span>
+          </button>
+        </div>
+
+        <!-- Основное навигационное меню -->
+        <nav class="nav" data-nav>
+          <a href="../index.html">Главная страница</a>
+          <a class="active" href="education.html">Образование</a>
+          <a href="work-experience.html">Опыт работы</a>
+
+          <!-- Выпадающее меню с достижениями -->
+          <div class="dropdown" data-dropdown>
+            <button type="button" data-dropdown-btn aria-expanded="false">Достижения ▾</button>
+            <div class="dropdown-panel">
+              <a href="achievements/teacher.html">Преподавателя</a>
+              <a href="achievements/students.html">Студентов</a>
+            </div>
+          </div>
+
+          <a href="projects.html">Проекты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основное содержимое страницы -->
+  <main class="container">
+    <!-- Заголовок и подзаголовок страницы -->
+    <h1 class="page-title">Образование</h1>
+    <p class="subtitle">
+      Дипломы, курсы повышения квалификации и подтверждающие материалы
+    </p>
+
+    <!-- Секция: основное образование -->
+    <section class="section">
+      <h2>Основное образование</h2>
+      <div class="rows">
+        <!-- Кликабельная карточка диплома -->
+        <a class="row row--link"
+           href="../content/education/yarovsk_polytechnic_college.pdf"
+           target="_blank"
+           rel="noopener"
+           aria-label="Открыть диплом Яровского политехнического техникума">
+          <p class="row-title">
+            КГБПОУ "Яровской политехнический техникум"
+          </p>
+          <p class="row-sub">
+            Образование по специальности 09.02.05 Прикладная информатика (по отраслям)
+          </p>
+          <p class="row-sub">
+            Присвоена квалификация: Техник-программист
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Секция: профессиональная переподготовка -->
+    <section class="section">
+      <h2>Переподготовка</h2>
+      <div class="rows">
+        <!-- Кликабельная карточка диплома о переподготовке -->
+        <a class="row row--link"
+           href="../content/education/moscow_institute_of_professional_retraining_and_advanced_training_of_teachers.pdf"
+           target="_blank"
+           rel="noopener"
+           aria-label="Открыть диплом о профессиональной переподготовке">
+          <p class="row-title">
+            ООО «Московский институт профессиональной переподготовки и повышения квалификации педагогов»
+          </p>
+          <p class="row-sub">
+            По программе «Педагог среднего профессионального образования. Теория и практика реализации ФГОС нового поколения».
+            Диплом предоставляет право на ведение профессиональной деятельности в сфере образования и подтверждает
+            присвоение квалификации «Преподаватель»
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Секция: профессиональные курсы -->
+    <section class="section">
+      <h2>Профессиональные курсы</h2>
+      <div class="rows">
+        <!-- Кликабельная карточка документа курса -->
+        <a class="row row--link"
+           href="../content/education/volunteer_abilympics.pdf"
+           target="_blank"
+           rel="noopener"
+           aria-label="Открыть документ курса Абилимпикс">
+          <p class="row-title">Доброволец «Абилимпикс»</p>
+          <p class="row-sub">
+            Центр добровольчества Абилимпикс в Алтайском крае на базе КГБПОУ «Бийский государственный колледж»
+          </p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно для просмотра документов -->
+  <div class="img-modal" id="imgModal" aria-hidden="true" role="dialog">
+    <div class="img-modal__dialog">
+      <!-- Область для показа изображения -->
+      <img class="img-modal__img" id="imgModalImg" alt="Документ" hidden />
+      <!-- Область для показа PDF-документа -->
+      <iframe class="img-modal__frame" id="imgModalFrame" title="Документ" hidden></iframe>
+    </div>
+  </div>
+
+  <!-- Подключение основного JavaScript-файла -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

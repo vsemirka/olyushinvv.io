@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <!-- Мета-информация и настройки страницы -->
+  <meta charset="utf-8" />
+  <!-- Иконка сайта (favicon) -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <!-- Адаптивная область просмотра для мобильных устройств -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Заголовок страницы во вкладке браузера -->
+  <title>Олюшин | Опыт работы</title>
+  <!-- Подключение основного файла стилей -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <!-- Логотип/название сайта со ссылкой на главную страницу -->
+        <a class="brand" href="../index.html">Портфолио</a>
+
+        <!-- Блок элементов управления навигацией -->
+        <div class="nav-actions">
+          <!-- Переключатель темы оформления -->
+          <div class="theme-switch" data-theme-switch aria-label="Переключатель темы">
+            <button type="button" data-theme-btn="light" aria-label="Светлая тема" aria-pressed="false">☀</button>
+            <button type="button" data-theme-btn="system" aria-label="Как в системе" aria-pressed="false">💻</button>
+            <button type="button" data-theme-btn="dark" aria-label="Тёмная тема" aria-pressed="false">🌙</button>
+            <span class="theme-switch__indicator" aria-hidden="true"></span>
+          </div>
+
+          <!-- Кнопка бургер-меню для мобильной навигации -->
+          <button class="burger" data-burger aria-label="Меню" aria-expanded="false">
+            ☰ <span style="font-size:13px;color:var(--muted)">Меню</span>
+          </button>
+        </div>
+
+        <!-- Основное навигационное меню -->
+        <nav class="nav" data-nav>
+          <a href="../index.html">Главная страница</a>
+          <a href="education.html">Образование</a>
+          <a class="active" href="work-experience.html">Опыт работы</a>
+
+          <!-- Выпадающее меню с достижениями -->
+          <div class="dropdown" data-dropdown>
+            <button type="button" data-dropdown-btn aria-expanded="false">Достижения ▾</button>
+            <div class="dropdown-panel">
+              <a href="achievements/teacher.html">Преподавателя</a>
+              <a href="achievements/students.html">Студентов</a>
+            </div>
+          </div>
+
+          <a href="projects.html">Проекты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основное содержимое -->
+  <main class="container">
+    <!-- Заголовок и подзаголовок страницы -->
+    <h1 class="page-title">Опыт работы</h1>
+    <p class="subtitle">Должности, периоды и направления деятельности</p>
+
+    <!-- Секция: текущее место работы -->
+    <section class="section">
+      <!-- Текущее место работы выводится статически в HTML. -->
+      <h2>Основное место работы</h2>
+      <div class="rows">
+        <!-- Карточка текущего места работы -->
+        <div class="row">
+          <p class="row-title">КГБПОУ «Яровской политехнический техникум»</p>
+          <p class="row-sub">Должность: Преподаватель | 26.08.2024 — настоящее время</p>
+          <p class="row-sub">
+            Преподаватель специальных дисциплин по направлению «Информационные системы и программирование».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция: предыдущие места работы -->
+    <section class="section">
+      <!-- Предыдущие места работы также заполняются вручную на этой странице. -->
+      <h2>Предыдущие места работы</h2>
+      <div class="rows">
+        <!-- Карточка места работы в МБУ «Комфорт» -->
+        <div class="row">
+          <p class="row-title">МБУ «Комфорт»</p>
+          <p class="row-sub">Должность: Рабочий по благоустройству | 05.07.2022 — 12.08.2022</p>
+        </div>
+
+        <!-- Карточка места работы в городской библиотеке -->
+        <div class="row">
+          <p class="row-title">МБУК «Городская библиотека» г. Яровое</p>
+          <p class="row-sub">Должность: Библиотекарь | 10.05.2023 — 23.08.2024</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
